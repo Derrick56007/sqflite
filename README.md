@@ -10,12 +10,12 @@ Supports both iOS and Android.
 ## Getting Started
 
 In your flutter project add the dependency:
-
-    dependencies:
-      ...
-      sqflite:
-       git: git://github.com/tekartik/sqflite
-    
+```dart
+dependencies:
+    ...
+    sqflite:
+        git: git://github.com/tekartik/sqflite
+```
 
 For help getting started with Flutter, view the online
 [documentation](https://flutter.io/).
@@ -23,11 +23,11 @@ For help getting started with Flutter, view the online
 ## Usage example
 
 Import `sqflite.dart`
-
-    import 'package:sqflite/sqflite.dart';
-    
+```dart
+import 'package:sqflite/sqflite.dart';
+```    
 Demo code to perform Raw SQL queries
-
+```dart
     // Get a location using path_provider
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     String path = join(documentsDirectory.path, "demo.db");
@@ -82,9 +82,9 @@ Demo code to perform Raw SQL queries
     
     // Close the database
     await database.close();
-
+```
 Example using the helpers
-
+```dart
     final String tableTodo = "todo";
     final String columnId = "_id";
     final String columnTitle = "title";
@@ -154,6 +154,7 @@ Example using the helpers
     
       Future close() async => db.close();
     }
+```
 
 ## Supported SQLite types
 
